@@ -57,5 +57,11 @@ public class CreateStudentRequest {
 	public void setCity(String city) {
 		this.city = city;
 	}
+//to log the object must have to string -- lol
+	@Override
+	public String toString() {
+		return "CreateStudentRequest [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", street=" + street + ", city=" + city + "]";
+	}
 
 }

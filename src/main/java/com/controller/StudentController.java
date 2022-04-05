@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,6 +32,8 @@ import com.service.StudentService;
 @RequestMapping("/api/student")
 public class StudentController {
 
+	Logger logger = LoggerFactory.getLogger(StudentController.class);
+	
 	@Autowired
 	StudentService studentService;
 	
@@ -51,6 +55,12 @@ public class StudentController {
 	 @GetMapping("/getAllStudentsJson")
 	 public List<StudentResponse> getAllStudents()
 	 {
+		 logger.error("ratlam ki gali mein kyun aana haana hai?");
+		 logger.warn("inside warn");
+		 logger.info("inside info");
+		 logger.debug("inside debug");
+		 logger.trace("inside trace");
+		 
 		 List<StudentResponse> students = new ArrayList<StudentResponse>();
 		 
 		 List<Student> studentsEntities = this.studentService.getAllStudents();
