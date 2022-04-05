@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"com.controller","com.service"})
+@ComponentScan({"com.controller","com.service","com.aop"})
 @EntityScan("com.entity")
 @EnableJpaRepositories("com.repository")
 public class InfybuzzSpringRestApiCourseApplication {

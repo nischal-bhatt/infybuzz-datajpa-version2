@@ -47,6 +47,7 @@ public class StudentController {
 	 @GetMapping("/getStudent")
 	 public String getStudent()
 	 {
+		 System.out.println("after aspect stuff - look at aspect config");
 		 return this.appName;
 	 }
 	 
